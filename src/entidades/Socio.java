@@ -6,6 +6,7 @@ public class Socio {
     private Long idSocio;
     private String nombre;
     private String curp;
+    private String direccion;
 
     public Socio() {
     }
