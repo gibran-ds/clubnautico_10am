@@ -50,6 +50,14 @@ public class Socio {
         this.curp = curp;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
