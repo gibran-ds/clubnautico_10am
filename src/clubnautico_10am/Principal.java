@@ -1,7 +1,10 @@
 package clubnautico_10am;
 
+import apirest.ISociosAPIRest;
+import apirest.SociosDummyAPIRest;
 import entidades.Socio;
 import guis.SociosForm;
+import java.util.List;
 import persistencia.ConexionBD;
 import persistencia.IConexionBD;
 import persistencia.ISociosDAO;
@@ -35,17 +38,20 @@ public class Principal {
         }
         //</editor-fold>
         
-        IConexionBD conexionBD = new ConexionBD();
-        ISociosDAO sociosDAO = new SociosDAO(conexionBD);
-        ISociosDAO sociosListDAO = new SociosListDAO();
+//        IConexionBD conexionBD = new ConexionBD();
+//        ISociosDAO sociosDAO = new SociosDAO(conexionBD);
+//        ISociosDAO sociosListDAO = new SociosListDAO();
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new SociosForm(sociosDAO).setVisible(true);
+//                new SociosForm(sociosListDAO).setVisible(true);
+//            }
+//        });
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SociosForm(sociosDAO).setVisible(true);
-                //new SociosForm(sociosListDAO).setVisible(true);
-            }
-        });
+        ISociosAPIRest sociosAPI = new SociosDummyAPIRest();
+        List<Socio> socios = sociosAPI.obtenerSocios();
     }
     
 }
