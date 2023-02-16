@@ -3,6 +3,7 @@ package entidades;
 public class Persona {
     private Long idPersona;
     private String nombre;
+    private String correo;
 
     public Persona(Long idPersona, String nombre) {
         this.idPersona = idPersona;
